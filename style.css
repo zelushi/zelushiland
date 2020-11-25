@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    image-rendering: crisp-edges;
+}
+
+body#index {
+    color: #ff00cc;
+}
+
+h1 {
+    z-index: 1000;
+    color: white;
+    background-color: black;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 6rem;
+    padding: 2rem;
+    box-shadow: 0px 2px 12px black;
+    text-align: center;
+}
+
+h1:hover {
+    letter-spacing: 2vw;
+    transition: 500ms ease-out;
+}
+h1:not(hover) {
+    letter-spacing: 0rem;
+    transition: 500ms ease-in;
+}
+
+
+
+h2 {
+    font-weight: 100;
+    margin: 2vw;
+    text-align: center;
+}
+
+
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    margin: 4vw;
+    flex-wrap: nowrap;
+}
+
+.centerer {
+    display: flex;
+    justify-content: center;
+}
+
+.gateText {
+    z-index: 4;
+    display: none;
+}
+
+.gateGrid {
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    grid-gap: 0rem;
+}
+
+.gatePadding {
+    padding: 0 2rem 0 2rem;
+}
+
+.gateGrid:hover > .gateText {
+    margin: 80px -8rem 0 -8rem;
+    display: block;
+}
+
+.gateGrid  .gateText:hover {
+    display: initial;
+}
+
+.gateGrid > .gatePadding img:hover {
+    transform: scaleX(0.5);
+}
+
+
+.gateTitle {
+    background-color:#ff00cc;
+    box-shadow: 0 0 24px #ff00cc;
+    color: #ffcc00;
+    z-index: 1000;
+}
+
+.godray {
+    position: fixed;
+    z-index: -1;
+    top: -2100px;
+    right: -110rem;
+    white-space: nowrap;
+
+    /* le animation i think*/
+
+    animation-name: spin;
+    animation-duration: 50000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+
+
+.godray > img {
+    width: 4000px;
+}
+
+.firstCloud {
+    position: fixed;
+    z-index: 0;
+    top: 45vh;
+    animation-name: cloudMovement;
+    animation-duration: 6000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+
+}
+
+@keyframes cloudMovement {
+    from{transform: translateX(15vw);}
+    to {transform: translateX(55vw);}
+}
+
+
+
+
+
+
+
+
+.choiceContainer {
+    margin: 4vw;
+}
+
+.poison {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.poison > div p {
+    text-align: center;
+}
+
+.poison > div img {
+    width: 28vw;
+    height: auto;
+}
+
+.poison > div img:hover {
+    transform: scale(1.25);
+    transition: 250ms ease-in-out;
+}
+
+.poison > div img:not(hover) {
+    transform: scale(1);
+    transition: 250ms ease-in-out;
+}
+
